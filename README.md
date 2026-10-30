@@ -1,0 +1,2 @@
+# ScrapNook_
+tugas iformatika
