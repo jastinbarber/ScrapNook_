@@ -1,0 +1,458 @@
+<title>Products - Hookie Drink</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #fff1fe;
+        color: #4a213c;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+        text-align: center;
+        padding: 55px 20px 45px;
+
+        background:
+            radial-gradient(
+                circle at 15% 20%,
+                #ffbdf8,
+                transparent 25%
+            ),
+            radial-gradient(
+                circle at 85% 80%,
+                #f38ed3,
+                transparent 28%
+            ),
+            #fff1ff;
+    }
+
+    .header small {
+        color: #f75ce3;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+
+    .header h1 {
+        margin-top: 8px;
+
+        font-size: clamp(38px, 6vw, 58px);
+
+        color: #4a2139;
+    }
+
+    .header h1 span {
+        color: #e667d5;
+    }
+
+    .header p {
+        max-width: 650px;
+
+        margin: 15px auto 0;
+
+        color: #764d5d;
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       PRODUCT GRID
+    ========================= */
+
+    .products {
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding: 20px 25px 80px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 28px;
+    }
+
+
+    /* =========================
+       PRODUCT CARD
+    ========================= */
+
+    .product-card {
+        background: white;
+
+        border-radius: 28px;
+
+        overflow: hidden;
+
+        border: 1px solid #f0d0ef;
+
+        box-shadow:
+            0 12px 35px
+            rgba(70, 35, 15, 0.08);
+
+        transition: 0.35s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+
+        box-shadow:
+            0 25px 50px
+            rgba(70, 35, 15, 0.17);
+    }
+
+
+    /* =========================
+       GAMBAR
+    ========================= */
+
+    .product-image {
+        height: 330px;
+
+        position: relative;
+
+        overflow: hidden;
+
+        background: #f4d5f3;
+    }
+
+    .product-image img {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+
+        transition: 0.5s ease;
+    }
+
+    .product-card:hover
+    .product-image img {
+        transform: scale(1.05);
+    }
+
+
+    /* =========================
+       INFORMASI
+    ========================= */
+
+    .product-info {
+        padding: 25px;
+    }
+
+    .product-info h2 {
+        font-size: 23px;
+
+        color: #4a213d;
+
+        margin-bottom: 8px;
+    }
+
+    .product-info p {
+        color: #80597f;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+        min-height: 65px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       BOTTOM
+    ========================= */
+
+    .product-bottom {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+    .price {
+        color: #db5ed1;
+
+        font-size: 20px;
+
+        font-weight: 800;
+    }
+
+    .price small {
+        display: block;
+
+        color: #a180a0;
+
+        font-size: 10px;
+
+        font-weight: 500;
+    }
+
+    .order {
+        text-decoration: none;
+
+        color: white;
+
+        background:
+            linear-gradient(
+                135deg,
+                #8b136f,
+                #e866d9
+            );
+
+        padding: 11px 18px;
+
+        border-radius: 50px;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        transition: 0.3s;
+    }
+
+    .order:hover {
+        transform: scale(1.06);
+
+        box-shadow:
+            0 7px 18px
+            rgba(139, 69, 19, 0.25);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+        .products {
+            grid-template-columns:
+                repeat(2, 1fr);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .products {
+            grid-template-columns: 1fr;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+        }
+
+        .product-image {
+            height: 350px;
+        }
+
+        .promo {
+            margin-left: 20px;
+
+            margin-right: 20px;
+
+            padding: 30px 20px;
+        }
+
+    }
+
+</style>
+</head>
+<body>
+<!-- =========================
+     HEADER
+========================= -->
+
+<section class="header">
+
+    <small>PRODUCT</small>
+
+    <h1>
+        Produk <span>ScrapNook</span>
+    </h1>
+
+    <p>
+        Lihat berbagai jenis-jenis scrapbook!
+    </p>
+
+</section>
+
+<!-- =========================
+     PRODUK
+========================= -->
+
+<section class="products">
+
+
+    <!-- =====================
+         CONT SCRAPBOOK 1
+    ====================== -->
+
+    <div class="product-card">
+
+        <div class="product-image">
+
+            <img
+                src="sc1.jpeg"
+                alt="ScrapBook 1">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>Scrapbook 1</h2>
+
+            <p>
+                Lembaran jurnal estetik dengan 
+                nuansa warna cerah yang ceria 
+                dan penuh semangat.
+            </p>
+
+
+            <div class="product-bottom">
+
+                <div class="price">
+                    $1
+
+                    <small>
+                        1 Pcs
+                    </small>
+                </div>
+
+                <a
+                    href="kontakSN.html"
+                    target="konten"
+                    class="order">
+                    Pesan →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         CONT SCRAPBOOK 2
+    ====================== -->
+
+    <div class="product-card">
+
+       <div class="product-image">
+
+            <img
+                src="sc2.jpeg"
+                alt="ScrapBook 2">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>Scrapbook 2</h2>
+
+            <p>
+                Halaman buku harian berkesan klasik 
+                dan hangat untuk menemani hari-harimu.
+            </p>
+
+
+            <div class="product-bottom">
+
+                <div class="price">
+                    $1
+
+                    <small>
+                        1 Pcs
+                    </small>
+                </div>
+
+                <a
+                    href="kontakSN.html"
+                    target="konten"
+                    class="order">
+                    Pesan →
+                </a>
+               
+               </div>
+
+            </div>
+    </div>
+
+
+    <!-- =====================
+         CONT SCRAPBOOK3
+    ====================== -->
+
+    <div class="product-card">
+
+         <div class="product-image">
+
+            <img
+                src="sc3.jpeg"
+                alt="Scrapbook 3">
+
+        </div>
+
+
+        <div class="product-info">
+
+            <h2>Coklat</h2>
+
+            <p>
+                Halaman spesial dengan pola unik 
+                dan estetik untuk mempercantik 
+                koleksi scrapbook.
+            </p>
+
+
+            <div class="product-bottom">
+
+                <div class="price">
+                    $1
+
+                    <small>
+                        1 Pcs
+                    </small>
+                </div>
+
+                <a
+                    href="kontakSN.html"
+                    target="konten"
+                    class="order">
+                    Pesan →
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</section>

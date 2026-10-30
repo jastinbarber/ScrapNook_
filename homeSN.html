@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrapNook - </title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff0f9;
+            color: #3b2520;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 248, 241, 0.95);
+
+
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(80, 40, 20, 0.08);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: #ff99f0;
+        }
+
+        .logo span {
+            color: #ed79bb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #bd0b7c;
+            font-weight: 600;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f084b1;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 80vh;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            background:
+                radial-gradient(circle at 85% 20%, #fab1d9 0, transparent 30%),
+                radial-gradient(circle at 10% 80%, #f8a8ff 0, transparent 25%),
+                #fff1ff;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #fed6ff;
+            color: #de35a3;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 75px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+            color: #f5a6e4;
+        }
+
+        .hero h1 span {
+            color: #850f59;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #76584d;
+        }
+
+        /* BOOK ILLUSTRATION */
+
+        .book {
+            width: 155px;
+            height: 230px;
+            background: rgba(255,255,255,0.2);
+            border: 4px solid rgba(255,255,255,0.7);
+            border-radius: 15px 15px 35px 35px;
+            position: relative;
+        }
+
+        }
+
+        /* STORY */
+        .story {
+            padding: 100px 8%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title small {
+            color: #fc7ce9;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 10px;
+            color: #46214a;
+        }
+
+        .story-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .story-card {
+            padding: 35px;
+            border-radius: 25px;
+            background: #e0bee6;
+            border: 1px solid #7a2c96;
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(100, 50, 20, 0.1);
+        }
+
+        .story-card h3 {
+            color: #a85d27;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .story-card p {
+            color: #72574d;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        /* QUOTE */
+        .quote {
+            padding: 100px 8%;
+            text-align: center;
+            background: #fff8f1;
+        }
+
+        .quote p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 30px;
+            line-height: 1.5;
+            font-weight: 700;
+            color: #e69681;
+        }
+
+        .quote span {
+            display: block;
+            margin-top: 20px;
+            font-size: 15px;
+            color: #e893f5;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 35px;
+            text-align: center;
+            background: #601d63;
+            color: #e6ccc1;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            .hero {
+                text-align: center;
+                flex-direction: column;
+                padding: 60px 7%;
+            }
+
+            .drink-card {
+                width: 240px;
+                height: 290px;
+            }
+
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2,
+            .flavors h2 {
+                font-size: 32px;
+            }
+
+            .quote p {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Scrap<span>Nook.</span></div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#cerita">About Scrapbook!</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <span class="badge">🧚 Magic in Every Page</span>
+
+            <h1>
+                Welcome to
+                <span>ScrapNook!</span>
+            </h1>
+
+            <p>
+                Yuk, kenalan lebih dekat dengan seni scrapbook 
+                dan temukan inspirasinya di sini!☘️📖
+            </p>
+
+<img src="LOGOSRCAPNOOK.jpeg" width="300">
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+    <section class="story" id="cerita">
+
+        <div class="section-title">
+            <small>Fun Fact</small>
+            <h2>about Scrapbook</h2>
+        </div>
+
+        <div class="story-container">
+
+            <div class="story-card">
+                <h3>📜 Akar Sejarah Unik Scrapbook</h3>
+
+                <p>
+                   Tahukah kamu? Seni scrapbook ternyata sudah ada sejak 
+                   abad ke-15 di Inggris! 
+                </p>
+
+                <br>
+
+                <p>
+                    Pada masa itu, orang-orang biasa mengumpulkan resep masakan, 
+                    kutipan penting, dan catatan harian ke dalam sebuah buku kosong 
+                    yang disebut "commonplace books". Baru pada abad ke-19, tren 
+                    ini berkembang menjadi seni menghias album foto dan kenangan 
+                    seperti yang kita kenal sekarang.
+                </p>
+            </div>
+
+
+            <div class="story-card">
+                <h3>✂️ Jejak Digital Pertama di Era Victoria</h3>
+
+                <p>
+                    Kegemaran membuat scrapbook mencapai puncaknya di era 
+                    Ratu Victoria di Inggris.
+                </p>
+
+                <br>
+
+                <p>
+                    Pada masa itu, kalangan bangsawan sangat hobi menggunting 
+                    ilustrasi majalah, stempel pos, kartu ucapan, hingga renda kain 
+                    untuk ditempel dan dihias dengan sangat detail di dalam buku 
+                    album pribadi mereka sebagai bentuk ekspresi diri.
+                </p>
+            </div>
+
+
+            <div class="story-card">
+                <h3>✨ Fun Fact Scrapnook</h3>
+
+                <p>
+                    Tahukah kamu? Nama Scrapnook adalah gabungan dari kata 
+                    "Scrapbook" dan "Nook" (yang berarti pojok kecil yang nyaman).
+                    Filosofinya, toko ini diibaratkan seperti sudut tersembunyi di dalam 
+                    hutan peri, tempat kamu bisa beristirahat sejenak dari rutinitas dan 
+                    melarikan diri ke dunia kreativitas yang penuh keajaiban, warna-warni 
+                    bunga lavender, serta serpihan memori manis.
+                </p>
+            </div>
+
+    </section>
+
+
+    <!-- QUOTE -->
+    <section class="quote">
+
+        <p>
+            “Stitching together small pieces of memory,
+            creating cozy corner 
+            where our stories live forever.”
+        </p>
+
+        <span>— ScrapNook —</span>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 <strong>ScrapNook</strong>.
+            Craft your magic. 🔮
+        </p>
+    </footer>
+
+</body>
+</html>

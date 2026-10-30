@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrapNook - Cerita Kami</title>
+  <style>
+    /* Reset & Theme Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif, Arial;
+    }
+
+    body {
+      background-color: #fdf2f4; /* Pink lembut */
+      color: #5a4b51;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Bagian Hero / Intro Toko */
+    .about-hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      border: 1px solid #f7d6e0;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 50px;
+      box-shadow: 0 6px 20px rgba(216, 112, 147, 0.08);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+      padding-right: 30px;
+    }
+
+    .tag-section {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #d87093;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .about-text h1 {
+      font-size: 2.2rem;
+      color: #4a3840;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .about-text h1 span {
+      color: #d87093;
+    }
+
+    .about-text p {
+      font-size: 0.95rem;
+      color: #836773;
+      line-height: 1.6;
+    }
+
+    .about-card-img {
+      flex: 1;
+      min-width: 280px;
+      background-color: #fbe4e8;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      border: 1px dashed #d87093;
+    }
+
+    .about-card-img h3 {
+      color: #d87093;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .about-card-img p {
+      font-size: 0.85rem;
+      color: #7a5c68;
+    }
+
+    /* Bagian Values (Apa yang Kami Jaga) */
+    .values-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .values-section h2 {
+      font-size: 1.8rem;
+      color: #4a3840;
+      margin-bottom: 8px;
+    }
+
+    .values-section p {
+      color: #836773;
+      font-size: 0.95rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .value-card {
+      background-color: #ffffff;
+      border: 1px solid #f7d6e0;
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(216, 112, 147, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .value-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .value-card h3 {
+      font-size: 1.15rem;
+      color: #4a3840;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-size: 0.85rem;
+      color: #836773;
+      line-height: 1.5;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-hero {
+        flex-direction: column;
+        padding: 25px;
+      }
+      .about-text {
+        padding-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- SEKSI 1: TENTANG KAMI (HERO) -->
+    <section class="about-hero">
+      <div class="about-text">
+        <span class="tag-section">✨ Tentang Toko Kami</span>
+        <h1>Lebih dari Sekadar Toko <span>Kertas & Kerajinan.</span></h1>
+        <p>ScrapNook adalah ruang kreatif kecil yang berawal dari hobi merangkai memori. Bagi kami, toko ini bukan sekadar tempat menjual perlengkapan <i>scrapbook</i>, tetapi juga wadah untuk belajar, merajut cerita, dan menciptakan keindahan yang abadi dalam setiap lembaran.</p>
+      </div>
+      <div class="about-card-img">
+        <h3>SCRAPNOOK</h3>
+        <p>🧚‍♀️ Pojok Kreasi Peri — Tempat di mana setiap kenangan menemukan rumahnya yang magis dan penuh warna.</p>
+      </div>
+    </section>
+
+    <!-- SEKSI 2: APA YANG KAMI JAGA (OUR VALUES) -->
+    <section class="values-section">
+      <h2>OUR VALUES</h2>
+      <p>Hal-hal bermakna yang selalu menjadi pegangan di dalam perjalanan ScrapNook.</p>
+
+      <div class="values-grid">
+        <!-- Card 1 -->
+        <div class="value-card">
+          <div class="value-icon">💖</div>
+          <h3>Kehangatan</h3>
+          <p>Kami ingin setiap pelanggan merasa disambut dengan hangat dan dihargai saat merangkai cerita bersama produk-produk kami.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="value-card">
+          <div class="value-icon">✨</div>
+          <h3>Kreativitas</h3>
+          <p>Terus mencoba ide baru, memadukan elemen estetik, dan menghadirkan inspirasi segar untuk setiap karya senimu.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="value-card">
+          <div class="value-icon">🌿</div>
+          <h3>Bertumbuh</h3>
+          <p>Kami percaya bahwa usaha kecil juga bisa terus berkembang selama tekun belajar, berkarya, dan berani mencoba hal baru.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
